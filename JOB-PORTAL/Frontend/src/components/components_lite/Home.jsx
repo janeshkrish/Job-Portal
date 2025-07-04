@@ -9,10 +9,10 @@ import useGetAllJobs from "@/hooks/useGetAllJobs";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const { loading, error } = useGetAllJobs(); // Trigger data fetch
-  const jobs = useSelector((state) => state.jobs.allJobs); // Access Redux state
+  const { loading, error } = useGetAllJobs(); 
+  const jobs = useSelector((state) => state.jobs.allJobs); 
 
-  console.log("Jobs in Component:", { loading, error, jobs }); // Log to check state
+  console.log("Jobs in Component:", { loading, error, jobs }); 
   const { user } = useSelector((store) => store.auth);
   const navigate = useNavigate();
 
